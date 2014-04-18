@@ -1,5 +1,5 @@
 class CreateVideos < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :spree_videos do |t|
       t.string :youtube_ref
       t.integer :product_id
@@ -7,9 +7,5 @@ class CreateVideos < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :spree_videos
   end
 end
