@@ -7,11 +7,11 @@ module Spree
 
       def update_positions
         params[:positions].each do |id, index|
-          Video.update_all(['position=?', index], ['id=?', id])
+          Video.find(id).update_attributes(position: index)
         end
 
         respond_to do |format|
-          format.js  { render :text => 'Ok' }
+          format.js  { render :text => params }
         end
       end
 

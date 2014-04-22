@@ -2,13 +2,13 @@
 
 <%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => "Videos"} %>
 
-<table class="index sortable">
+<table class="index sortable" data-sortable-link="<%= update_positions_admin_product_videos_path %>">
   <tr>
     <th><%= t("youtube_ref") %></th>
   </tr>
 
   <% @product.videos.each do |video| %>
-    <tr id="<%= dom_id(video) %>">
+    <tr id="<%= spree_dom_id(video) %>">
       <td>
         <span class="handle"></span>
         	<%= h video.youtube_ref %>
