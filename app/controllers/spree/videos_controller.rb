@@ -12,7 +12,7 @@ module Spree
     end
 
     def show
-      video = Video.find(params[:id])
+      @video = Video.find(params[:id])
       client = YouTubeIt::Client.new
     end
   end
