@@ -1,6 +1,5 @@
-<h4><%= t("new_video") %></h4>
 <%= form_for(:video, :url => { :controller => 'videos', :action => 'create' }, :html => { :multipart => true }) do |form| %>
-  <table class="basic-table">
+  <table class="table">
     <%= render :partial => "form", :locals => { :f => form } %>
   </table>
   <p class="form-buttons">
@@ -10,13 +9,10 @@
 <% end %>
 
 
-<script type="text/javascript">    
-  jQuery('#cancel_link').click(function (event) { 
+<script type="text/javascript">
+  jQuery('#cancel_link').click(function (event) {
     jQuery('#new_video_link').show();
     jQuery('#video').html('');
-  });  
- 
-</script>
+  });
 
- 
- 
+</script>
