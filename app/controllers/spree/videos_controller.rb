@@ -1,7 +1,7 @@
 module Spree
   class VideosController < BaseController
     respond_to :html
-    
+
     def index
       @videos = Video.all(:joins => :product, :conditions => 'spree_products.deleted_at is NULL')
     end
@@ -12,8 +12,8 @@ module Spree
     end
 
     def show
-      @video = Video.find(params[:id])
-      client = YouTubeIt::Client.new
+      video = Video.find(params[:id])
+      account = Yt::Account.new
     end
   end
 end
