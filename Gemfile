@@ -10,6 +10,6 @@ group :test do
   gem 'coffee-rails'
 end
 
-gem 'spree', '~> 3.0'
-gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '3-0-stable'
+gem 'spree', '~> 4.1'
+gem 'spree_auth_devise', '~> 4.1'
 gem 'sass-rails'
